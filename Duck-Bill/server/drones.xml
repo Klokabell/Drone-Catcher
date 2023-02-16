@@ -1,0 +1,61 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml"
+<report>
+  <deviceInformation deviceId="GUARDB1RD">
+    <listenRange>500000</listenRange>
+    <deviceStarted>2023-02-09T15:23:34.948Z</deviceStarted>
+    <uptimeSeconds>8846</uptimeSeconds>
+    <updateIntervalMs>2000</updateIntervalMs>
+  </deviceInformation>
+  <capture snapshotTimestamp="2023-02-09T17:51:01.426Z">
+    <drone>
+      <serialNumber>SN-kt0s73HgDv</serialNumber>
+      <model>HRP-DRP 1</model>
+      <manufacturer>ProDröne Ltd</manufacturer>
+      <mac>94:54:5a:46:11:b1</mac>
+      <ipv4>193.173.244.176</ipv4>
+      <ipv6>fce6:aad8:19ca:f29d:993a:2cda:7c7f:bcfd</ipv6>
+      <firmware>3.0.2</firmware>
+      <positionY>244968.70354029158</positionY>
+      <positionX>89162.24559605816</positionX>
+      <altitude>4636.892004578255</altitude>
+    </drone>
+    <drone>
+      <serialNumber>SN-dEhwB91_y4</serialNumber>
+      <model>Altitude X</model>
+      <manufacturer>DroneGoat Inc</manufacturer>
+      <mac>0c:ce:ba:c1:b7:9c</mac>
+      <ipv4>2.227.216.47</ipv4>
+      <ipv6>209d:d988:04dd:bc32:ab0b:56a3:d614:7fad</ipv6>
+      <firmware>0.7.2</firmware>
+      <positionY>92642.1278557791</positionY>
+      <positionX>330868.92243429675</positionX>
+      <altitude>4850.441279675299</altitude>
+    </drone>
+    <drone>
+      <serialNumber>SN-Hy_0G9krdg</serialNumber>
+      <model>Mosquito</model>
+      <manufacturer>MegaBuzzer Corp</manufacturer>
+      <mac>5d:9d:47:66:a0:63</mac>
+      <ipv4>168.23.125.148</ipv4>
+      <ipv6>3b9a:36a2:81f7:6d78:655b:4d60:eb29:21a6</ipv6>
+      <firmware>0.2.6</firmware>
+      <positionY>351304.5199076489</positionY>
+      <positionX>91431.17736528155</positionX>
+      <altitude>4946.391169438952</altitude>
+    </drone>
+    <drone>
+      <serialNumber>SN-YrNOjuE_jC</serialNumber>
+      <model>Altitude X</model>
+      <manufacturer>DroneGoat Inc</manufacturer>
+      <mac>10:95:b9:58:72:c1</mac>
+      <ipv4>249.187.109.251</ipv4>
+      <ipv6>19b3:702a:ded2:a8dc:980f:689a:6b82:619d</ipv6>
+      <firmware>0.8.3</firmware>
+      <positionY>285591.61262483173</positionY>
+      <positionX>387597.5675848121</positionX>
+      <altitude>4698.166560984041</altitude>
+    </drone>
+  </capture>
+</report>
