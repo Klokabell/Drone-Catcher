@@ -1,6 +1,6 @@
 const express = require('express')
 const axios = require('axios')
-const { serialThriller } = require("./Serials")
+const { serialThriller } = require("./serials")
 const { pilotInfo } = require('./pilotInfo')
 
 
@@ -9,7 +9,8 @@ const app = express()
 
  
 setInterval(() => {
-    axios.get('http://assignments.reaktor.com/birdnest/drones', {headers: {"Content-Type": 'application/x-www-form-urlencoded'}})
+    axios.get('http://assignments.reaktor.com/birdnest/drones', 
+                {headers: {"Content-Type": 'application/x-www-form-urlencoded'}})
     .then(res => res.data)
     .then(res => serialThriller(res))
     .then(res => pilotInfo(res))
@@ -19,7 +20,7 @@ setInterval(() => {
         if(error.code === 'ETIMEDOUT'){
             console.log("request time-out")
         }
-        else console.log("Aw, error ")
+        else console.log("Aw, error ", error)
     });
 }, 2000)
 

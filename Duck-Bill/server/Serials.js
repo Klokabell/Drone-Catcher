@@ -1,6 +1,6 @@
 const {InViolation} = require("./violations")
 const cheerio = require('cheerio')
-const {duplicateHandler} = require('./duplicateHandler')
+const { deleter } = require('./deleteHandler')
 
 let serials = []
 
@@ -10,6 +10,8 @@ const serialThriller = async (data) => {
       xmlMode: true,
   })
 
+  console.log(serials.length)
+
     $("drone").each((i, drone) => {
               const posx = $(drone).find("positionX").text()
               const posy =  $(drone).find("positionY").text()
@@ -18,10 +20,12 @@ const serialThriller = async (data) => {
               let newdrone = 
                 {
                   SN: $(drone).find("serialNumber").text(),
-                  Time: Date.now()
+                  Time: Date.now(),
+                  Expired: false
                 }
                 if(serials.length === 0){serials.push(newdrone)}            
                 else {
+                  console.log("running else here")
                   const duplicateDrone = serials.find(drone => drone.SN === newdrone.SN)
                   if(duplicateDrone){duplicateDrone.Time = newdrone.Time}
                   else serials.push(newdrone)
@@ -29,14 +33,13 @@ const serialThriller = async (data) => {
 
               }
               
-          })
-   
-    return serials
+                })
+              if(serials.length>0){
+                console.log("deleter value is ", deleter(serials))
+                  serials = deleter(serials) 
+                }
+    console.log(serials.length)
+    return serials;
   } 
 
   module.exports = { serialThriller, serials }
-
-
-  /*
-  serials.length>0 ? (InViolation(posx, posy) && !(serials.some(({guy}) : 
-  */
